@@ -79,8 +79,8 @@ export function FormStep() {
   }
 
   return (
-    <main className="bg-gray-50 min-h-screen flex items-center justify-center px-4 py-12">
-      <div className="w-full max-w-xl bg-white rounded-xl shadow-md p-8">
+    <main className="min-h-screen flex items-center justify-center px-4 py-12">
+      <div className="w-[440px] bg-white rounded-xl shadow-md p-8">
         <h2 className="text-2xl font-bold mb-6 text-center">{t.title}</h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
