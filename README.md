@@ -140,6 +140,7 @@ npm run dev:server
 - Diseño responsive implementado con Tailwind (puede ajustarse según feedback)
 - Todos los tipos están centralizados para escalabilidad y seguridad de tipo
 - El SSR es funcional y cumple con el fallback de `<noscript>`
+- El detalle técnico se encuentra en el archivo architecture.md
 
 ---
 
