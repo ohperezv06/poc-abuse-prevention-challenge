@@ -21,7 +21,7 @@ export function Captcha({ onVerified }: CaptchaProps) {
       <p className="mb-2 text-sm text-gray-600">Verifica que no eres un robot:</p>
       <ReCAPTCHA
         ref={recaptchaRef}
-        sitekey="6Ld-qSgrAAAAAKJBgoRh93tejrGuu3pmeuEczuZj" // Clave de prueba pública de Google
+        sitekey="6Ld-qSgrAAAAAKJBgoRh93tejrGuu3pmeuEczuZj"
         onChange={handleChange}
       />
     </div>
