@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario SSR</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    input, select { display: block; margin-bottom: 1rem; width: 100%; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Completa tu información</h1>
+
+  <form method="POST" action="/ssr-form">
+
+    <input type="hidden" name="referrer" value="<%= referrer %>">
+    <input type="hidden" name="token" value="<%= token %>">
+
+    <label>Nombre:</label>
+    <input type="text" name="name" value="<%= user.name %>" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" value="<%= user.email %>" required>
+
+    <label>Dirección:</label>
+    <input type="text" name="address" value="<%= user.address %>" required>
+
+    <label>País:</label>
+    <select name="country" required>
+      <% countries.forEach(country => { %>
+        <option value="<%= country.code %>" <%= user.country === country.code ? 'selected' : '' %>><%= country.name %></option>
+      <% }) %>
+    </select>
+
+    <button type="submit">Confirmar</button>
+  </form>
+</body>
+</html>
