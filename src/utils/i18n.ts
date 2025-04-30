@@ -24,8 +24,8 @@ const translations: Translations = {
 };
 
 export function detectLanguage(): Language {
-  // const hostname = window.location.hostname;
-  const hostname = "www.mercadolivre.com.br";
+  const hostname = window.location.hostname;
+  // const hostname = "www.mercadolivre.com.br";
   if (hostname.includes('mercadolivre.com.br')) return 'pt';
   return 'es';
 }
